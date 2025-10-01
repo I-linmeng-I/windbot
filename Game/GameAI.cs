@@ -457,6 +457,7 @@ namespace WindBot.Game
         /// <returns>A new MainPhaseAction containing the action to do.</returns>
         public MainPhaseAction OnSelectIdleCmd(MainPhase main)
         {
+            return new MainPhaseAction(MainPhaseAction.MainAction.ToBattlePhase);
             CheckSurrender();
             foreach (CardExecutor exec in Executor.Executors)
             {
